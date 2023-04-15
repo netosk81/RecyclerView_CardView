@@ -10,12 +10,13 @@ import com.example.cardview.R;
 import com.example.cardview.adapter.PostagemAdapter;
 import com.example.cardview.model.Postagem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclePostagem;
-    private List<Postagem> postagens;
+    private List<Postagem> postagens = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         this.prepararPostagens();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclePostagem.setLayoutManager( layoutManager );
-
         //define adapter
         PostagemAdapter adapter = new PostagemAdapter(postagens);
         recyclePostagem.setAdapter(adapter);
