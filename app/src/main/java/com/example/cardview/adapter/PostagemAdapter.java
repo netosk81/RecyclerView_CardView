@@ -22,7 +22,7 @@ public class PostagemAdapter  extends RecyclerView.Adapter<PostagemAdapter.MyVie
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View itemLista = LayoutInflater.from(parent.getContext())
-                .inflate(com.example.cardview.R.layout.postagem_detalhe, parent,false);
+                .inflate(com.example.cardview.R.layout.postagem_detalhe,parent,false);
 
         return new MyViewHolder(itemLista);
     }
@@ -30,22 +30,29 @@ public class PostagemAdapter  extends RecyclerView.Adapter<PostagemAdapter.MyVie
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        holder.textNome.setText("Jose Ribeiro Neto");
+        holder.textPostagem.setText("#tbt Viagem Legal");
+        holder.imagePostagem.setImageResource(com.example.cardview.R.drawable.imagem1);
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 6;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         private TextView    textNome;
         private TextView    textPostagem;
-        private ImageView   imagemPostagem;
-
+        private ImageView   imagePostagem;
 
         public MyViewHolder(@NonNull View itemView) {
+
             super(itemView);
+            textNome = itemView.findViewById(com.example.cardview.R.id.textNome);
+            textPostagem = itemView.findViewById(com.example.cardview.R.id.textPostagem);
+            imagePostagem = itemView.findViewById(com.example.cardview.R.id.imagePostagem);
         }
     }
 }
