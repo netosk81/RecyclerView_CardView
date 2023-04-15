@@ -19,7 +19,7 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jose Ribeiro Neto"
@@ -34,7 +34,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/imagePostagem"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="10dp"
@@ -42,7 +42,7 @@
                 app:srcCompat="@drawable/imagem1" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textPostagem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
