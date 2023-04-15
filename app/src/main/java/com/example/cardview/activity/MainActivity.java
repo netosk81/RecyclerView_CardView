@@ -8,10 +8,14 @@ import android.os.Bundle;
 
 import com.example.cardview.R;
 import com.example.cardview.adapter.PostagemAdapter;
+import com.example.cardview.model.Postagem;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclePostagem;
+    private List<Postagem> postagens;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,4 +34,22 @@ public class MainActivity extends AppCompatActivity {
         recyclePostagem.setAdapter(adapter);
 
     }
+
+    public void preparaPostagens(){
+
+        Postagem p = new Postagem("Carla", "Viagem Carla", R.drawable.imagem1);
+        this.postagens.add( p );
+
+        Postagem p = new Postagem("Maria", "Viagem Maria", R.drawable.imagem2);
+        this.postagens.add( p );
+        Postagem p = new Postagem("Luiz", "Viagem Luiz", R.drawable.imagem3);
+        this.postagens.add( p );
+        Postagem p = new Postagem("Joao", "Viagem Joao", R.drawable.imagem4);
+        this.postagens.add( p );
+
+
+
+
+    }
+
 }
